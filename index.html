@@ -1,16 +1,33 @@
+
+<!-- partial:index.partial.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="chin yin teng">
+
+  <title>Chin Yin Teng Portfolio </title>
+  <!--------------- jquery --------------->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <!--------------- gsap --------------->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <!--------------- font --------------->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <!--------------- morphext.css --------------->
+  <!--------------- <style>
+    .morphext>.animated {
+      display: inline-block;
+  </style>--------------->
 
-  <style>
-
-  </style>
+  <!--------------- animate.css --------------->
   <style>
     @charset "UTF-8";
 
@@ -2801,24 +2818,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       animation-name: rollOut;
     }
   </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--------------- morphext.css --------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.css" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.css
+  <!--------------- <style>
+    .morphext>.animated {
+      display: inline-block;
+  </style>--------------->
 
-
-
-" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+  <!--------------- morphext.min.js --------------->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.js
+  <!--------------- morphext.js --------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.js"></script>
 
-
-
-"></script>
-
+  <!--------------- t.min.js --------------->
   <script>
     /*t.js-1.3.1;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/ ;
     (function(c) {
@@ -3022,6 +3035,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       }
     })(jQuery);
   </script>
+  <!--------------- WOW wow.js  --------------->
   <script>
     /*! WOW wow.js - v1.3.0 - 2016-10-04
      * https://wowjs.uk
@@ -3349,41 +3363,871 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     });
   </script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script>
-    $(".js_rotating").Morphext({
-      animation: "zoomIn",
-      separator: ",",
-      speed: 3500,
-      complete: function() {}
-    });
-  </script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="chin yin teng">
-
-  <title>Chin Yin Teng Portfolio </title>
-
   <!-- stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "IBM Plex Mono", monospace !important;
+      background: #0f0f0f !important;
+      color: #fff !important;
+      cursor: none;
+    }
+
+    #wrapper {
+      width: 100%;
+      height: 100vh;
+      background: #0f0f0f;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .cursor {
+      position: absolute;
+      background: white;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      z-index: 1;
+      transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+      user-select: none;
+      pointer-events: none;
+      transform: scale(0.8);
+    }
+
+    .cursor::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background-image: url("https://svgshare.com/i/_EL.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 100%;
+      opacity: 0;
+    }
+
+    .cursor.active {
+      opacity: 1;
+      transform: scale(12);
+    }
+
+    .cursor.active::before {
+      opacity: 1;
+    }
+
+    .cursor-follower {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      z-index: 1;
+      transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+      user-select: none;
+      pointer-events: none;
+      transform: translate(4px, 4px);
+    }
+
+    .cursor-follower.active {
+      opacity: 0.3;
+      transform: scale(0);
+    }
+
+    .space {
+      width: 100%;
+      height: 100px;
+    }
+
+    .whitespace {
+      width: 100%;
+      height: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .whitespace {
+        display: none;
+      }
+    }
+
+    /*--------------- typewriter effect --------------- */
+    .line {
+      width: 24em;
+      top: 50%;
+      margin: auto;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);
+    }
+
+    .anim-typewriter {
+      animation: typewriter 4s steps(40) 1s 1 normal both,
+        blinkTextCussor 500ms steps(40) infinite normal;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 16em;
+      }
+    }
+
+    @media (max-width: 768px) {
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 17em;
+        }
+      }
+    }
+
+    @keyframes blinkTextCussor {
+      from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+      }
+
+      to {
+        border-right-color: transparent;
+      }
+    }
+
+    /*--------------- navigation --------------- */
+    nav {
+      width: 100%;
+      background: #0f0f0f;
+      height: 80px;
+      position: fixed;
+      z-index: 1;
+    }
+
+    nav #brand {
+      float: left;
+      display: block;
+      margin-left: 82px;
+      line-height: 80px;
+      font-weight: bold;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    nav #brand a {
+      color: #fff;
+      transition: all 0.3s ease-out;
+    }
+
+    nav #brand a:hover {
+      text-decoration: none;
+    }
+
+    nav #menu {
+      float: left;
+      right: 80px;
+      position: fixed;
+    }
+
+    nav #menu li {
+      font-family: "Open Sans", sans-serif;
+      padding-left: 40px;
+      display: inline-block;
+      cursor: auto;
+      font-weight: 300;
+      line-height: 80px;
+      position: relative;
+      transition: all 0.3s ease-out;
+    }
+
+    nav #menu li span {
+      font-weight: 700;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    nav #menu li a {
+      color: #fff;
+    }
+
+    nav #menu li a:hover {
+      text-decoration: none;
+    }
+
+    #toggle {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 300;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      float: right;
+      transition: all 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 16px;
+      font-weight: 300;
+      font-family: "IBM Plex Mono", monospace;
+      z-index: 2;
+      cursor: pointer;
+      top: -2px;
+      line-height: 80px;
+    }
+
+    #resize {
+      z-index: 1;
+      top: 0px;
+      position: fixed;
+      background: #0f0f0f;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease-out;
+    }
+
+    #resize #menu {
+      height: 90px;
+      position: absolute;
+      left: 45%;
+      transform: translateX(-40%);
+      text-align: center;
+      display: table-cell;
+      vertical-align: center;
+    }
+
+    #resize #menu li {
+      font-family: "Open Sans", sans-serif;
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 50px;
+      min-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+
+    #resize li:nth-child(1) {
+      margin-top: 140px;
+    }
+
+    #resize #menu li a {
+      color: #fff;
+    }
+
+    #resize #menu li a:hover {
+      text-decoration: none;
+    }
+
+    #resize.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      #toggle {
+        visibility: visible;
+        opacity: 1;
+        margin-top: 6px;
+        margin-right: 4px;
+      }
+
+      nav #brand {
+        margin-left: 24px;
+      }
+
+      #menu a {
+        font-size: 20px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+      }
+
+      #resize li span {
+        font-weight: bolder;
+      }
+
+      nav #menu {
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      #resize {
+        visibility: hidden !important;
+      }
+    }
+
+    /*--------------- hero section --------------- */
+    .name {
+      font-family: "M PLUS 1p", sans-serif;
+      position: relative;
+      top: 40%;
+      transform: translateY(-50%);
+      font-size: 50px;
+      font-weight: 700;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero {
+      /*height: 100vh;*/
+      padding-top: 50px;
+      padding-bottom: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-weight: lighter;
+      text-align: center;
+      letter-spacing: 1px;
+      line-height: 58px;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 21px;
+      }
+    }
+
+    /*--------------- scroll down icon animation --------------- */
+    .scroll-down {
+      position: absolute;
+      left: 50%;
+      top:70%;
+      bottom: 100px;
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      z-index: 0;
+      text-decoration: none;
+      text-shadow: 0;
+      width: 13px;
+      height: 13px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: translate(-50%, 0) rotate(45deg);
+      animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+    }
+
+    @keyframes fade_move_down {
+      0% {
+        transform: translate(0, -20px) rotate(45deg);
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(0, 20px) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    /*--------------- projects section --------------- */
+    .vertical {
+      margin-top: 40px;
+      border-left: 1px solid #fff;
+      height: 80px;
+      position: absolute;
+      left: 50%;
+    }
+
+    .project {
+      height: 500px;
+      cursor: pointer;
+    }
+
+    .project1 {
+      background: url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+      background-size: cover;
+      /*transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);*/
+    }
+
+    .project1::after {
+      content: "timeless flow.";
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 36px;
+      position: relative;
+      color: #fff;
+      display: block;
+      top: 8%;
+      left: -50%;
+      right: 0;
+      bottom: 0;
+    }
+
+    .project1 h5 {
+      position: relative;
+      font-family: "Open Sans", sans-serif;
+      top: 30%;
+      left: -50%;
+      right: 0;
+      bottom: 0;
+    }
+
+    .project1:hover {
+      background: url(https://images.unsplash.com/photo-1482501157762-56897a411e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) no-repeat 50% 50%;
+      background-size: cover;
+      transform: translateX();
+    }
+
+    .project2 h5 {
+      position: relative;
+      font-family: "Open Sans", sans-serif;
+      top: 80%;
+      left: 110%;
+      right: 0;
+      bottom: 0;
+    }
+
+    .project2 {
+      background: url(https://images.unsplash.com/photo-1468870045442-e7d799d8c98a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2448&q=80) no-repeat 50% 50%;
+      background-size: cover;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    }
+
+    .project2::after {
+      content: "foretime.";
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 36px;
+      position: relative;
+      color: #fff;
+      display: block;
+      top: 58%;
+      left: 110%;
+      right: 0;
+      bottom: 0;
+    }
+
+    .project2:hover {
+      background: url(https://images.unsplash.com/photo-1482501157762-56897a411e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) no-repeat 50% 50%;
+      background-size: cover;
+      transform: translateX();
+    }
+
+    .project3 {
+      background: url(https://images.unsplash.com/photo-1482501157762-56897a411e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) no-repeat 50% 50%;
+      background-size: cover;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    }
+
+    .project3 h5 {
+      position: relative;
+      font-family: "Open Sans", sans-serif;
+      top: 80%;
+      left: -50%;
+      right: 0;
+      bottom: 0;
+    }
+
+    .project3::after {
+      content: "never again.";
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 36px;
+      position: relative;
+      color: #fff;
+      display: block;
+      top: 58%;
+      left: -50%;
+      right: 0;
+      bottom: 0;
+    }
+
+    .project3:hover {
+      background: url(https://images.unsplash.com/photo-1468870045442-e7d799d8c98a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2448&q=80) no-repeat 50% 50%;
+      background-size: cover;
+      transform: translateX();
+    }
+
+    .project4 {
+      background: url(https://images.unsplash.com/photo-1435685813800-51ba4ceb9c4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1785&q=80) no-repeat 50% 50%;
+      background-size: cover;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    }
+
+    .project4 h5 {
+      position: relative;
+      font-family: "Open Sans", sans-serif;
+      top: 30%;
+      left: 110%;
+      right: 0;
+      bottom: 0;
+    }
+
+    .project4::after {
+      content: "departure.";
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 36px;
+      position: relative;
+      color: #fff;
+      display: block;
+      top: 8%;
+      left: 110%;
+      right: 0;
+      bottom: 0;
+    }
+
+    .project4:hover {
+      background: url(https://images.unsplash.com/photo-1468870045442-e7d799d8c98a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2448&q=80) no-repeat 50% 50%;
+      background-size: cover;
+      transform: translateX();
+    }
+
+    @media (max-width: 768px) {
+      .project {
+        width: 100% !important;
+        margin: 14px auto;
+      }
+
+      .vertical {
+        display: none;
+      }
+
+      .project1::after,
+      .project2::after,
+      .project3::after,
+      .project4::after {
+        position: absolute;
+        font-family: "Open Sans", sans-serif;
+        top: 40%;
+        left: 5%;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+      }
+
+      .project1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+        background-size: cover;
+      }
+
+      .project1:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+        background-size: cover;
+      }
+
+      .project2 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+        background-size: cover;
+      }
+
+      .project2:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+        background-size: cover;
+      }
+
+      .project3 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+        background-size: cover;
+      }
+
+      .project3:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+        background-size: cover;
+      }
+
+      .project4 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+        background-size: cover;
+      }
+
+      .project4:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80) no-repeat 50% 50%;
+        background-size: cover;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        cursor: auto;
+      }
+
+      .project1 h5 {
+        position: absolute;
+        top: 55%;
+        left: 45%;
+        right: 0;
+        bottom: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .project2 h5 {
+        position: absolute;
+        top: 55%;
+        left: 45%;
+        right: 0;
+        bottom: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .project3 h5 {
+        position: absolute;
+        top: 55%;
+        left: 45%;
+        right: 0;
+        bottom: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .project4 h5 {
+        position: absolute;
+        top: 55%;
+        left: 45%;
+        right: 0;
+        bottom: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .cursor {
+        visibility: hidden;
+      }
+
+      .cursor::before {
+        visibility: hidden;
+      }
+
+      .cursor.active {
+        visibility: hidden;
+      }
+
+      .cursor.active::before {
+        visibility: hidden;
+      }
+
+      .cursor-follower {
+        visibility: hidden;
+      }
+
+      .cursor-follower.active {
+        visibility: hidden;
+      }
+    }
+
+    /*--------------- footer section --------------- */
+    .collab {
+      text-align: right;
+    }
+
+    .collab p {
+      font-weight: lighter !important;
+      margin-bottom: 20px;
+    }
+
+    .hr {
+      background: rgba(255, 255, 255, 0.2);
+      height: 1px;
+    }
+
+    .info h4 {
+      font-size: 18px;
+      font-weight: lighter;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .info p {
+      color: grey;
+      font-weight: lighter;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .info li {
+      font-weight: lighter;
+      color: #fff;
+      font-size: 18px;
+      padding-left: 20px;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    
+
+    #media,
+    #address {
+      text-align: right;
+    }
+
+    #media ul {
+      list-style: none;
+    }
+
+    #media ul li {
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+
+      .collab,
+      #personal,
+      #media,
+      #address {
+        text-align: center;
+      }
+
+      .info ul {
+        margin: 0 0 0 -22px;
+        padding: 0;
+      }
+    }
+
+    /*--------------- work page --------------- */
+    .hero-content {
+      margin-left: 0%;
+    }
+
+    .hero-content p {
+      font-weight: 300;
+      line-height: 36px;
+      color: grey;
+    }
+
+    .hero-content h6 {
+      text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        padding-top: 50px;
+        width: 96%;
+        margin: 0 auto;
+      }
+    }
+
+    /*---------------about page --------------- */
+    .about {
+      height: 500px;
+      margin-top: 120px;
+    }
+
+    .image {
+      background: url(https://images.unsplash.com/photo-1540885762261-a2ca01f290f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80) no-repeat 50% 70%;
+    }
+
+    /*--------------- contact form --------------- */
+    #contact-form {
+      margin: 5% 1.4%;
+    }
+
+    #contact-form ul {
+      list-style: none;
+      border-radius: 5px;
+      margin-bottom: 40px;
+    }
+
+    #contact-form li {
+      padding: 10px;
+    }
+
+    #contact-form li:last-of-type {
+      border-bottom: none;
+    }
+
+    #contact-form label {
+      display: block;
+      font-size: 0.8em;
+      color: #999;
+      padding-left: 5px;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      resize: vertical;
+      background: transparent;
+      color: #fff;
+      font-weight: bolder;
+    }
+
+    input:focus {
+      outline: none;
+      border: none;
+    }
+
+    textarea:focus {
+      outline: none;
+      border: none;
+    }
+
+    .textarea {
+      border-bottom: 1px solid #dfdfdf;
+    }
+
+    .send {
+      margin-left: 50px;
+      text-transform: uppercase;
+      padding: 20px 30px;
+      background: transparent;
+      color: #dfdfdf;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .send:hover {
+      background: #dfdfdf;
+      color: #101010;
+    }
+
+    @media (max-width: 768px) {
+      #contact-form {
+        margin: 5% -8%;
+        width: 98%;
+      }
+    }
+
+    /*--------------- project page --------------- */
+    .prev,
+    .next p {
+      color: grey;
+    }
+
+    .prev p {
+      text-align: left;
+    }
+
+    .next p {
+      text-align: right;
+    }
+  </style>
 
   <!-- bootstrap cdns -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-  <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-
-  <!-- terminal effect -->
-  <script src="t.min.js"></script>
-
-  <!-- for on scroll animations -->
-  <link rel="stylesheet" href="animate.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="wow.min.js"></script>
 
 </head>
 
@@ -3391,10 +4235,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   <div class="wrapper">
     <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <div class="cursor-follower"></div> 
 
     <!--------------- navbar starts here --------------->
-    <nav>
+       <nav>
       <span id="brand">
         <a href="index.html">Chin Yin Teng</a>
       </span>
@@ -3426,8 +4270,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <!--------------- navbar ends here --------------->
 
     <!--------------- hero section starts here --------------->
-
-    <div class="space"></div>
+ <div class="space"></div>
     <div class="space"></div>
     <div class="space"></div>
 
@@ -3438,22 +4281,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       <div class="header">
 
         <h1 class="line anim-typewriter ">Maker of creative things.</h1>
-
       </div>
 
     </div>
 
-    <div class="scroll-down"></div>
+    <div class="scroll-down"></div> 
     <!--------------- hero section ends here --------------->
-
+  
     <!--------------- projects section starts here --------------->
-    <div class="container-fluid">
+     <div class="container-fluid">
       <br><br><br>
 
       <div class="row">
         <div class="col-lg-8"></div>
 
-        <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='https://www.google.com/'"><h5 >    123    </h5>
+        <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='https://www.google.com/'">
+          <h5> 123 </h5>
 
         </div>
 
@@ -3462,7 +4305,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       <div class="whitespace"></div>
 
       <div class="row">
-        <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project.html'"><h5 >    456    </h5></div>
+        <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project.html'">
+          <h5> 456 </h5>
+        </div>
 
         <div class="col-lg-6"></div>
       </div>
@@ -3472,8 +4317,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       <div class="row">
         <div class="col-lg-7"></div>
 
-        <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project.html'"><h5 >    789    </h5></div>        
-
+        <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project.html'">
+          <h5> 789 </h5>
+        </div>
 
         <div class="col-lg-1"></div>
       </div>
@@ -3483,7 +4329,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       <div class="row">
         <div class="col-lg-1"></div>
 
-        <div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'"><h5 >    012    </h5></div>
+        <div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'">
+          <h5> 012 </h5>
+        </div>
 
         <div class="col-lg-6"></div>
       </div>
@@ -3493,11 +4341,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <!--------------- projects section ends here --------------->
 
     <!--------------- footer starts here --------------->
-    <div class="footer">
+   <div class="footer">
       <div class="container">
         <br><br>
-
-      
 
         <br>
 
@@ -3510,12 +4356,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <div class="info">
           <div class="row">
             <div class="col-lg-4" id="personal">
-              
+
               <br><br>
             </div>
 
             <div class="col-lg-4" id="media">
-             
 
               <br><br>
             </div>
@@ -3523,26 +4368,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <div class="col-lg-4" id="address">
               <p class="wow fadeInUp" data-wow-delay="0s">Interested in working with me?
 
-</p>
+              </p>
               <h4 class="wow fadeInUp" data-wow-delay="0.2s">0417cyt@gmail.com</h4>
               <br><br>
-              
+
             </div>
           </div>
         </div>
-      
+
+      </div>
+      <!--------------- footer ends here --------------->
+
+      <br><br><br><br>
+
     </div>
-    <!--------------- footer ends here --------------->
-
-    <br><br><br><br>
-
-  </div>
   </div>
 
   <!-- greensock cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script type="text/javascript">
     // navigation starts here
     $("#toggle").click(function() {
@@ -3612,6 +4455,125 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       follower.removeClass("active");
     });
   </script>
+  <script>
+    $("#js-rotating").Morphext({
+      // The [in] animation type. Refer to Animate.css for a list of available animations.
+      animation: "flipInX",
+      // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+      separator: ",",
+      // The delay between the changing of each phrase in milliseconds.
+      speed: 2000,
+      complete: function() {
+        // Called after the entrance animation is executed.
+      }
+    });
+  </script>
+
+  <script>
+    /*! Morphext - v2.4.7 - 2016-11-04 */ !(function(a) {
+      "use strict";
+
+      function b(b, c) {
+        (this.element = a(b)),
+        (this.settings = a.extend({}, d, c)),
+        (this._defaults = d),
+        this._init();
+      }
+      var c = "Morphext",
+        d = {
+          animation: "bounceIn",
+          separator: ",",
+          speed: 2e3,
+          complete: a.noop
+        };
+      (b.prototype = {
+        _init: function() {
+          var b = this;
+          (this.phrases = []),
+          this.element.addClass("morphext"),
+            a.each(
+              this.element.text().split(this.settings.separator),
+              function(c, d) {
+                b.phrases.push(a.trim(d));
+              }
+            ),
+            (this.index = -1),
+            this.animate(),
+            this.start();
+        },
+        animate: function() {
+          (this.index = ++this.index % this.phrases.length),
+          (this.element[0].innerHTML =
+            '<span class="animated ' +
+            this.settings.animation +
+            '">' +
+            this.phrases[this.index] +
+            "</span>"),
+          a.isFunction(this.settings.complete) &&
+            this.settings.complete.call(this);
+        },
+        start: function() {
+          var a = this;
+          this._interval = setInterval(function() {
+            a.animate();
+          }, this.settings.speed);
+        },
+        stop: function() {
+          this._interval = clearInterval(this._interval);
+        }
+      }),
+      (a.fn[c] = function(d) {
+        return this.each(function() {
+          a.data(this, "plugin_" + c) ||
+            a.data(this, "plugin_" + c, new b(this, d));
+        });
+      });
+    })(jQuery);
+  </script>
+  <script>
+    function hasTouch() {
+      return (
+        "ontouchstart" in document.documentElement ||
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0
+      );
+    }
+    if (hasTouch()) {
+      // remove all the :hover stylesheets
+      try {
+        // prevent exception on browsers not supporting DOM styleSheets properly
+        for (var si in document.styleSheets) {
+          var styleSheet = document.styleSheets[si];
+          if (!styleSheet.rules) continue;
+          for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+            if (!styleSheet.rules[ri].selectorText) continue;
+            if (styleSheet.rules[ri].selectorText.match(":hover")) {
+              styleSheet.deleteRule(ri);
+            }
+          }
+        }
+      } catch (ex) {}
+    }
+    if (!("ontouchstart" in document.documentElement)) {
+      document.documentElement.className += " no-touch";
+    }
+    // Select the text you want to make it circular
+    const text = document.querySelector(".circular-text .text");
+    // Make the selected text circler with CircleType
+    // you can find the full docs here: https://circletype.labwire.ca/
+    const rotate = new CircleType(text).radius(65);
+    // Add a scroll listener to the window object and rotate the selected text according to the scroll
+    // we used * 0.15 to make the rotation looks smoother
+    window.addEventListener("scroll", function() {
+      text.style.transform = `rotate(${window.scrollY * 0.15}deg)`;
+    });
+  </script>
+
 </body>
 
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
 </html>
